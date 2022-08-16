@@ -1,0 +1,6 @@
+1.Records of the patients must be maintained.
+2.Doctors with the necessary skills must be appointed to the patients.
+3.Nurses must not attend different patient at same time.
+4.Premium charges for the single room service.
+
+

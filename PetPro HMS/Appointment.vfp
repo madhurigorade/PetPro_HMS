@@ -1,0 +1,32 @@
+<apex:page sidebar="false" showHeader="false" Controller="Appointmentcontroller">
+<apex:form >
+
+    <apex:pageBlock title="Appointment Details">
+    
+    <apex:pageBlockSection >
+    <apex:inputField value="{!a.Name}" />
+    <apex:inputField value="{!a.Appointment_Date__c }"/>
+    <apex:inputField value="{!a.Doctor__c}"/>
+    <apex:inputField value="{!a.Doctor_email__c}"/>
+    <apex:inputField value="{!a.Patient__c }"/>
+    <apex:inputField value="{!a.Patient_email__c}"/>
+	<apex:inputField value="{!a.Room__c}"/>
+    <apex:inputField value="{!a.Status__c}"/>
+    
+    
+    </apex:pageBlockSection>
+    
+    <apex:pageBlockButtons >
+    <apex:commandButton value="Save" action="{!save}" />
+    <apex:commandButton value="Save & New" action="{!save}" />
+    <apex:commandButton value="Cancel" action="/apex/Registration" />
+    </apex:pageBlockButtons>
+    
+   
+    
+    
+</apex:pageBlock>
+</apex:form>
+  
+
+</apex:page>
