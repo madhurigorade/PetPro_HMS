@@ -1,0 +1,48 @@
+VF page code for Treatment:- 
+
+
+<apex:page sidebar="false" showHeader="false" Controller="TreatmentController">
+<apex:form > 
+    <apex:pageBlock title="Treatment Details">
+        <apex:pageBlockSection>
+            <apex:inputField value="{!Treatment.Medication__c}" />
+             <apex:inputField value="{!Treatment.Tests__c}" />
+             <apex:inputField value="{!Treatment.Status__c}" />
+             <apex:inputField value="{!Treatment.Total_Charge__c}" />
+        </apex:pageBlockSection>
+        
+         <apex:pageBlockButtons >
+    <apex:commandButton value="Save" action="{!save}" />
+    <apex:commandButton value="Save & New" action="{!save}" />
+    <apex:commandButton value="Cancel" action="/apex/Treatment" />
+    </apex:pageBlockButtons>
+        
+    </apex:pageBlock>
+    </apex:form>  
+</apex:page>
+
+
+
+
+VF Controller code for treatment:
+
+
+public class TreatmentController {
+public Treatment__c Treatment {get; set;}  
+
+public TreatmentController(){
+Treatment = new Treatment__c();
+}    
+public pagereference save(){
+return null;
+}
+public pagereference saveandnew(){
+insert Treatment;
+
+pagereference pageref =new PageReference('/apex/Treatment');
+Treatment.clear();
+return pageref;
+}    
+    
+
+}
